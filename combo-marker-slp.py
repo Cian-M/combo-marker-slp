@@ -42,9 +42,10 @@ def mark(root, f):
         frame = str(minute) + "-" + str(second)
         finishedFrames.append(frame)
     name = ""
-    for frame in finishedFrames:
-        name = name + str(frame) + ", "
-    os.rename(r'' + root + "/" + f, r'' + root + "/" + name[:len(name) - 2] + '.slp')
+    if(len(finishedFrames) > 0):
+        for frame in finishedFrames:
+            name = name + str(frame) + ", "
+        os.rename(r'' + root + "/" + f, r'' + root + "/" + name[:len(name) - 2] + '.slp')
 
         
 main()
