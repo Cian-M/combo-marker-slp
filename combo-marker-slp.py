@@ -8,7 +8,6 @@ def main():
         rootDir = sys.argv[1]
     else:
         rootDir = "."
-    print(rootDir)
     for root, dirs, files in os.walk(rootDir):
         for f in files:
             if(f[len(f) - 4:] == ".slp"):
