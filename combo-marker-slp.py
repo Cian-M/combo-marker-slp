@@ -15,6 +15,9 @@ def main():
 
 def mark(root, f):
     game = Game(root + "/" + f)
+    for players in game.start.players:
+            if(players and players.type == event.Start.Player.Type.CPU):
+                return
     frames = game.frames
     found = [False, False, False, False]
     endSearch = [0, 0, 0, 0]
